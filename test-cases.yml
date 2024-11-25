@@ -1,0 +1,841 @@
+---
+- summary: |
+    Ability for a user to play a simple battle without signing up
+  requirement: |
+    When a user clicks the "TRY SIMPLE BATTLE" button, they are redirected to a game with a bot
+  prerequisites: |
+    The user is not signed in;
+    The unauthenticated home page is open - https://codebattle.hexlet.io/;
+  test-data: |
+    N/A
+  steps:
+    - Click the "TRY SIMPLE BATTLE" button
+  expected-result: |
+    The game page opens, where the user competes against a bot by completing a task first
+  status: pass
+
+- summary: |
+    Correct functionality of the "Sign up" button
+  requirement: |
+    When a user clicks the "Sign up" button, they are redirected to the page containing the registration form
+  prerequisites: |
+    The user is not signed in;
+    The unauthenticated home page is open - https://codebattle.hexlet.io/;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Sign up" button
+  expected-result: |
+    The user has been redirected to the page containing the registration form - https://codebattle.hexlet.io/users/new
+  status: pass
+
+- summary: |
+    Successful registration using email and password
+  requirement: |
+    When a user signs up by filling in the form, they successfully create their account
+  prerequisites: |
+    The user is not signed in;
+    The registration page is open - https://codebattle.hexlet.io/users/new;
+  test-data: |
+    Nickname = mr_qa_guy123
+    Email = correct_email@mail.com
+    Password (and Password Confirmation) = aBce248+
+  steps:
+    - Enter the nickname, email, password, and password provided
+    - Click the "Submit" button
+  expected-result: |
+    The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user can see their username and profile picture in the webpage header;
+  status: pass
+
+- summary: |
+    Successful registration using a Github account
+  requirement: |
+    When a user signs up with their Github account, they successfully create their account
+  prerequisites: |
+    The registration page is open - https://codebattle.hexlet.io/users/new;
+    The user is not signed in to the website;
+    The user is signed in to their Github account;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Sign up with Github" button
+  expected-result: |
+    The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user can see their username and profile picture in the webpage header;
+  status: pass
+
+- summary: |
+    Successful registration using a Discord account
+  requirement: |
+    When a user signs up with their Discord account, they successfully create their account
+  prerequisites: |
+    The registration page is open - https://codebattle.hexlet.io/users/new;
+    The user is not signed in to the website;
+    The user is signed in to their Discord account;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Sign up with Discord" button
+  expected-result: |
+    The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user can see their username and profile picture in the webpage header;
+  status: fail
+
+- summary: |
+    Correct functionality of the "Sign in" button
+  requirement: |
+    When a user clicks the "Sign in" button, they are redirected to the page containing the login form
+  prerequisites: |
+    The user is not signed in;
+    The unauthenticated home page is open - https://codebattle.hexlet.io/;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Sign in" button
+  expected-result: |
+    The user has been redirected to the page containing the login form - https://codebattle.hexlet.io/session/new
+  status: pass
+
+- summary: |
+    Successful login using a registered email and password.
+  requirement: |
+    When a user signs in with a registered email and correct password, the login session starts successfully
+  prerequisites: |
+    The user is not signed in;
+    The login page is open - https://codebattle.hexlet.io/session/new;
+  test-data: |
+    Email = correct_email@mail.com
+    Password = aBce248+
+  steps:
+    - Enter the email and password provided
+    - Click the "Submit" button
+  expected-result: |
+    The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user can see their username and profile picture in the webpage header;
+  status: pass
+
+- summary: |
+    Unsuccessful login with an unregistered email
+  requirement: |
+    When a user tries to sign in with the unregistered email, they get an error message
+  prerequisites: |
+    The user is not signed in;
+    The login page is open - https://codebattle.hexlet.io/session/new;
+  test-data: |
+    Email = wrong_email@mail.com
+    Password = aBce248+
+  steps:
+    - Enter the email and password provided
+    - Click the "Submit" button
+  expected-result: |
+    The user does not see their username and profile picture in the webpage header;
+    The user has not been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user gets the error message, "EMAIL_NOT_FOUND";
+  status: pass
+
+- summary: |
+    Unsuccessful login with a wrong password
+  requirement: |
+    If a user tries to sign in using the wrong password, they get an error message
+  prerequisites: The user is not signed in;
+    The login page is open - https://codebattle.hexlet.io/session/new;
+  test-data: |
+    Email = correct_email@mail.com
+    Password = aBce248-
+  steps:
+    - Enter the email and password provided
+    - Click the "Submit" button
+  expected-result: |
+    The user does not see their username and profile picture in the webpage header;
+    The user has not been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user gets the error message, "INVALID_PASSWORD";
+  status: pass
+
+- summary: |
+    Successful login using a Github account
+  requirement: |
+    When a user signs in with their Github account, the login session starts successfully
+  prerequisites: |
+    The login page is open - https://codebattle.hexlet.io/session/new;
+    The user is not signed in to the website;
+    The user is signed in to their Github account;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Sign in with Github" button
+  expected-result: |
+    The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user can see their username and profile picture in the webpage header;
+  status: pass
+
+- summary: |
+    Successful login using a Discord account
+  requirement: |
+    When a user signs in with their Discord account, the login session starts successfully
+  prerequisites: |
+    The login page is open - https://codebattle.hexlet.io/session/new;
+    The user is not signed in to the website;
+    The user is signed in to their Discord account;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Sign in with Discord" button
+  expected-result: |
+    The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
+    The user can see their username and profile picture in the webpage header;
+  status: fail
+
+- summary: |
+    Correct functionality of the "Forgot your password?" text link
+  requirement: |
+    When a user clicks the "Forgot your password?" text link, the form appears where the user enters their registered email address
+  prerequisites: |
+    The login page is open - https://codebattle.hexlet.io/session/new
+  test-data: |
+    N/A
+  steps:
+    - Click the "Forgot your password?" text link
+  expected-result: |
+    The user has been redirected to the page where they enter their email address to reset the password - https://codebattle.hexlet.io/remind_password
+  status: pass
+
+- summary: |
+    Successful receipt of the password reset instruction by email
+  requirement: |
+    After the user enters their registered email address and clicks the "Submit" button, they are informed that the email has been sent with the instruction on how to reset their password
+  prerequisites: |
+    The password reset page is open - https://codebattle.hexlet.io/remind_password
+  test-data: |
+    Email = correct_email@mail.com
+  steps:
+    - Enter the email provided
+    - Click the "Submit" button
+    - Check if email is received
+  expected-result: |
+    The user has been informed about the email being sent which has the instruction on how to reset their password;
+    The user gets an email with the instruction;
+  status: pass
+
+- summary: |
+    Correct functionality of the password reset link
+  requirement: |
+    After clicking the link to reset a password, a user is redirected to the website where they can enter a new password
+  prerequisites: |
+    The user has just submitted the request to reset their password;
+    The email with the password reset link is open;
+  test-data: |
+    N/A
+  steps:
+    - Click the link in the email
+  expected-result: |
+    The user has been redirected to the page where they enter a new password
+  status: pass
+
+- summary: |
+    Successful password reset
+  requirement: |
+    When a user updates their password, they can use it to sign in to the website
+  prerequisites: |
+    The page is open where a new password needs to be entered
+  test-data: |
+    New password = fGhk346!
+  steps:
+    - Enter the given password
+    - Click the "SAVE" button
+    - Sign in using the new password
+  expected-result: |
+    The message appears stating that the user can now sign in with their new password;
+    The user is able to sign in with the new password;
+  status: pass
+
+- summary: |
+    Successful logout from account
+  requirement: |
+    When a user clicks the "Sign Out" button, they are logged out of their account and redirected to the home page
+  prerequisites: |
+    The user is signed in
+  test-data: |
+    N/A
+  steps:
+    - Click the profile picture on the right side of the website header
+    - Click the "Sign Out" button
+  expected-result: |
+    The user has been redirected to the home page - https://codebattle.hexlet.io/
+  status: pass
+
+- summary: |
+    Correct functionality of the "CREATE A GAME" button in the lobby page
+  requirement: |
+    When a user clicks the "CREATE A GAME" button, a modal window pops up with the parameters of the game to be created
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+  test-data: |
+    N/A
+  steps:
+    - Click the "CREATE A GAME" button
+  expected-result: |
+    The modal window pops up with the game parameters that the user needs to set
+  status: pass
+
+- summary: |
+    Ability to play with a bot
+  requirement: |
+    When a user creates a game where game type is set to "With a bot", they play with the correspondiong opponent
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The "Create a game" modal window is open;
+  test-data: |
+    N/A
+  steps:
+    - Set game type to "With a bot"
+    - Click the "Create battle" button
+  expected-result: |
+    The game with a bot has been started;
+    The opponent has the robot icon next to its name;
+  status: pass
+
+- summary: |
+    Ability to play with other user
+  requirement: |
+    When a user creates a game where game type is set to "With other user", they play with the correspondiong opponent
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The "Create a game" modal window is open;
+  test-data: |
+    N/A
+  steps:
+    - Set game type to "With other user"
+    - Click the "Create battle" button
+    - Wait until someone joins the game
+  expected-result: |
+    The game with other user has been started
+  status: pass
+
+- summary: |
+    Ability to invite a friend to play a game
+  requirement: |
+    When a user creates a game with the game type set to "With a friend", an invitation is sent to the opponent, who should accept or decline it
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The "Create a game" modal window is open;
+  test-data: |
+    N/A
+  steps:
+    - Set game type to "With a friend"
+    - Choose an opponent from the drop-down list
+    - Click the "Create invite" button
+    - Click the crossing swords icon button in the webpage header
+  expected-result: |
+    The counter increases by 1 in the corner of the crossing swords icon button;
+    The invitation with the opponent's name in it can be seen after the user clicks the crossing swords icon button;
+    The user receives the notification in the chat that they have invited their opponent;
+  status: pass
+
+- summary: |
+    Inability to invite a friend to play a game if an invitation already exists in their name
+  requirement: |
+    When a user tries to invite a friend to play a game when another invitation already exists, the system does not allow the new one to be created
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The "Create a game" modal window is open;
+  test-data: |
+    N/A
+  steps:
+    - Set game type to "With a friend"
+    - Select an opponent from the drop-down list to whom an invitation has already been sent
+    - Click the "Create invite" button
+    - Click the crossing swords icon button in the webpage header
+  expected-result: |
+    The counter does not increase in the corner of the crossing swords icon button;
+    There is still only one invitation for the opponent to whom the user tried to send another one;
+  status: pass
+
+- summary: |
+    Ability to cancel an invitation for a friend
+  requirement: |
+    When a user clicks the "Cancel" button for a battle invitation, they cancel it
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    At least one invitation has been created;
+  test-data: |
+    N/A
+  steps:
+    - Click the crossing swords icon button
+    - Choose an invitation that needs to be cancelled
+    - Click the "Cancel" button
+  expected-result: |
+    The counter decreases by 1 in the corner of the crossing swords icon button;
+    The cancelled invitation disappears from the list;
+  status: pass
+
+- summary: |
+    Ability to accept an invitation from a friend
+  requirement: |
+    When someone invites a user to play a game, the user can see that and accept the invitation
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The user has received at least one invitation to play a game;
+  test-data: |
+    N/A
+  steps:
+    - Click the crossing swords icon in the webpage header
+    - Click the "Accept" button
+  expected-result: |
+    The user has been redirected to the game
+  status: fail
+
+- summary: |
+    Successfully joining a game created by another user or a bot
+  requirement: |
+    When a user clicks the "Fight" button in the lobby, the game starts with a human player or a bot who has been waiting for an opponent
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Fight" button
+  expected-result: |
+    The user has been redirected to the game
+  status: pass
+
+- summary: |
+    Ability to switch between light and dark theme in the code editor
+  requirement: |
+    When a user plays a game, they can click the icon ("sun" / "moon") button that switches between light and dark theme in the code editor
+  prerequisites: |
+    The user is in the game
+  test-data: |
+    N/A
+  steps:
+    - Click the icon ("sun" / "moon") button next to the programming languages drop-down list
+    - Click the icon button again to reverse the previous theme
+  expected-result: |
+    The theme switches from dark to light and vice versa
+  status: pass
+
+- summary: |
+    Notification of winning a game
+  requirement: |
+    When a user wins the game, they are notified about that
+  prerequisites: |
+    The user is in the game;
+    The user has written code that should pass all tests;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Run" button
+  expected-result: |
+    The user gets the notification about winning the game;;
+    The message appears in the output tab telling the user that the all tests have been passed;
+  status: pass
+
+- summary: |
+    Notification of failing tests in a game
+  requirement: |
+    When a user runs the code which is incorrect, they are notified about that
+  prerequisites: |
+    The user is in the game;
+    The user has written code that should not pass all tests;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Run" button
+  expected-result: |
+    The message appears in the output tab telling the user that the tests have been failed;
+    The user does not win the game;
+  status: pass
+
+- summary: |
+    Notification of losing a game
+  requirement: |
+    When a user loses the game, they are notified about that
+  prerequisites: |
+    The user is in the game;
+    The opponent can win the game;
+  test-data: |
+    N/A
+  steps:
+    - Let the opponent win the game
+  expected-result: |
+    The user gets the notification about losing the game;
+    The message appears in the opponent's output tab stating that all tests have been passed;
+  status: pass
+
+- summary: |
+    Notification of a draw in a game
+  requirement: |
+    When no one wins a game and time is up, the players are notified about the draw
+  prerequisites: |
+    The user is in the game;
+    The user and opponent wait for time to pass in the game;
+  test-data: |
+    N/A
+  steps:
+    - Wait until the time is up
+  expected-result: |
+    The user gets the notification about the draw in the game
+  status: pass
+
+- summary: |
+    Ability to give up in a game
+  requirement: |
+    When a user gives up in the game, they lose it
+  prerequisites: |
+    The user is in the game
+  test-data: |
+    N/A
+  steps:
+    - Click the kebab menu type of button next to the "Run" button
+    - Click the "Give up" option
+    - Click the "Give up" button in the confirmation window again
+  expected-result: |
+    The user gets the notification about losing the game
+  status: pass
+
+- summary: |
+    Ability to choose the difficulty level of a game
+  requirement: |
+    When a user creates a game and selects a difficulty level, they play the game at that level
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The "Create a game" modal window is open;
+  test-data: |
+    N/A
+  steps:
+    - Select the difficulty level (try another one than the default one)
+    - Click the button to create a game
+  expected-result: |
+    The game starts and the level matches the one selected by the user
+  status: pass
+
+- summary: |
+    Ability to choose a random game
+  requirement: |
+    When a user creates a game without specifying which one, they play a random game
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The "Create a game" modal window is open;
+  test-data: |
+    N/A
+  steps:
+    - Click the button to create a game
+    - Create a few more games
+    - Make sure the game is different every time you create it
+  expected-result: |
+    The games that were created are different
+  status: pass
+
+- summary: |
+    Ability to choose a specific game
+  requirement: |
+    When a user creates a game that is not random, they play a specific game that they select in the parameters
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    The "Create a game" modal window is open;
+  test-data: |
+    N/A
+  steps:
+    - Select the game from the drop-down list
+    - Click the button to create a game
+  expected-result: |
+    The game that was created matches the one selected by the user
+  status: pass
+
+- summary: |
+    Successful change of a programming language in a game
+  requirement: |
+    A user can change the programming language when they are in the game
+  prerequisites: |
+    The user is in a game or a simple battle
+  test-data: |
+    N/A
+  steps:
+    - Select any other language listed in the drop-down
+  expected-result: |
+    The syntax of the code in the editor has been changed according to the selected programming language
+  status: pass
+
+- summary: |
+    Tasks are availbale in both English and Russian
+  requirement: |
+    A user can read a task in English or Russian
+  prerequisites: |
+    The user is in a game or a simple battle
+  test-data: |
+    N/A
+  steps:
+    - Click the drop-down list as shown in screenshot056.png
+    - Select "RU" to see the task in Russian
+    - Select "EN" to see the task in English
+  expected-result: |
+    The task is written in both English and Russian
+  status: pass
+
+- summary: |
+    A user sees the opponent's code editor
+  requirement: |
+    When the user is in a game, they can see their opponent's code editor
+  prerequisites: |
+    The user is in the game
+  test-data: |
+    N/A
+  steps:
+    - Check if opponent's code editor is viewable
+  expected-result: |
+    The opponent's code editor is viewable
+  status: pass
+
+- summary: |
+    Inability to type in the opponent's code editor
+  requirement: |
+    When a user tries to type in their opponent's code editor, nothing is entered
+  prerequisites: |
+    The user is in the game
+  test-data: |
+    Any characters
+  steps:
+    - Try to type any characters into the opponent's code editor
+  expected-result: |
+    Nothing happens
+  status: pass
+
+- summary: |
+    The user sees the output of the opponent's tests
+  requirement: |
+    When a user is in a game, they can see the output of the opponent's tests
+  prerequisites: |
+    The user is in the game
+  test-data: |
+    N/A
+  steps:
+    - Check if the opponent has the tab with tests' output
+  expected-result: |
+    The opponent's tests' output is viewable
+  status: pass
+
+- summary: |
+    Ability to watch others' battles (games)
+  requirement: |
+    A user can watch how other users play by selecting the ongoing battle in the lobby list
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page is open - https://codebattle.hexlet.io/;
+    At least one battle is ongoing;
+  test-data: |
+    N/A
+  steps:
+    - Click the "Show" button to see the ongoing battle between other players
+  expected-result: |
+    The user sees the code editors and the outputs of players
+  status: pass
+
+- summary: |
+    Ability to view the history of a completed game as a replay
+  requirement: |
+    When a user picks a random battle in the "HISTORY" tab and clicks the "Show" button, they see the playback interface
+  prerequisites: |
+    The user is signed in;
+    The history tab is open - https://codebattle.hexlet.io/#completedGames;
+  test-data: |
+    N/A
+  steps:
+    - Choose a completed game from the list
+    - Click the "Show" button
+  expected-result: |
+    The user has been redirected to the playback interface of the completed game
+  status: fail
+
+- summary: |
+    Winning against a bot does not affect rating
+  requirement: |
+    When a user wins a game against the bot, they do not earn any rating points
+  prerequisites: |
+    The user is in the game;
+    The opponent is the bot;
+    The user can win the game;
+  test-data: |
+    N/A
+  steps:
+    - Remember your rating before winning the game;
+    - Win the game;
+    - Check whether your rating has been increased or not after winning the game against the bot;
+  expected-result: |
+    The rating remains the same
+  status: pass
+
+- summary: |
+    Losing against a bot does not affect rating
+  requirement: |
+    When a user loses a game to the bot, they do not lose any rating points
+  prerequisites: |
+    The user is in the game;
+    The opponent is the bot;
+  test-data: |
+    N/A
+  steps:
+    - Remember your rating before losing the game;
+    - Lose the game;
+    - Check whether your rating has been decreased or not after losing the game to the bot;
+  expected-result: |
+    The rating remains the same
+  status:
+
+- summary: |
+    Rating increases after winning against a human opponent
+  requirement: |
+    When a user wins a game, they earn points
+  prerequisites: |
+    The user is in the game;
+    The opponent is not a bot;
+    The user can win the game;
+  test-data: |
+    N/A
+  steps:
+    - Remember your rating before winning the game;
+    - Win the game;
+    - Check if your rating has been increased after winning against the human opponent;
+  expected-result: |
+    The rating has been increased
+  status: pass
+
+- summary: |
+    Rating decreases after losing to a human opponent
+  requirement: |
+    When a user loses a game, they lose points
+  prerequisites: |
+    The user is in the game;
+    The opponent is not a bot;
+  test-data: |
+    N/A
+  steps:
+    - Remember your rating before losing the game;
+    - Lose the game;
+    - Check if your rating has been decreased after losing a game to the human opponent
+  expected-result: |
+    The rating has been decreased
+  status: pass
+
+- summary: |
+    Ability to send a message in general chat in the "LOBBY" tab
+  requirement: |
+    A user can send messages in the general chat in the "LOBBY" tab
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page with the "LOBBY" tab is open - https://codebattle.hexlet.io/#lobby;
+    General chat is selected;
+  test-data: |
+    Any text
+  steps:
+    - Type any text in the chat
+    - Click the "Send" button
+  expected-result: |
+    The text appears in the general chat
+  status: pass
+
+- summary: |
+    Ability to select an online player to send a direct message
+  requirement: |
+    When a user selects an online player to whom they want to send a message, a chat opens with the selected name
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page with the "LOBBY" tab is open - https://codebattle.hexlet.io/#lobby;
+    At least one player should be online;
+  test-data: |
+    N/A
+  steps:
+    - Select any online player and click on them;
+    - Click the "Direct message" option
+  expected-result: |
+    The chat with the selected player has been opened
+  status: pass
+
+- summary: |
+    Ability to send a direct message to another player in lobby
+  requirement: |
+    When a chat opens with a specific username, a user can send them a message privately
+  prerequisites: |
+    The user is signed in;
+    The authenticated home page with the "LOBBY" tab is open - https://codebattle.hexlet.io/#lobby;
+    The chat with a specific user has been selected;
+  test-data: |
+    Any text
+  steps:
+    - Type any text in the chat
+    - Click the "Send" button
+  expected-result: |
+    The text appears in the private chat
+  status: pass
+
+- summary: |
+    Ability to send a message to an opponent in a game
+  requirement: |
+    When a user sends the message in the game, it appears in the game chat
+  prerequisites: |
+    The user is in the game
+  test-data: |
+    Any text
+  steps:
+    - Type any text in the chat
+    - Click the "Send" button
+  expected-result: |
+    The text appears in the chat
+  status: pass
+
+- summary: |
+    Successful change of username
+  requirement: |
+    When a user changes their username in the settings and clicks the "Save" button, it updates
+  prerequisites: |
+    The user is signed in;
+    The settings page is open - https://codebattle.hexlet.io/settings;
+    A fictitious username that has not been taken yet;
+  test-data: |
+    Your name = QA_Engineer6204
+  steps:
+    - Enter the given username in the "You name" field
+    - Click the "Save" button
+    - Reload the page
+  expected-result: |
+    The user sees their new username in the webpage header
+  status: pass
+
+- summary: |
+    Unsuccessful change of username
+  requirement: |
+    When a user tries to change their username that has already been taken and clicks the "Save" button, an error message appears
+  prerequisites: |
+    The user is signed in;
+    The settings page is open - https://codebattle.hexlet.io/settings;
+  test-data: |
+    Your name = vtm
+  steps:
+    - Enter the given username in the "You name" field
+    - Click the "Save" button
+  expected-result: |
+    The user sees the error message stating that the username has already been taken
+  status: pass
+
+- summary: |
+    (text)
+  requirement: |
+    (text)
+  prerequisites: |
+    (text)
+  test-data: |
+    (text or n/a)
+  steps:
+    - (text)
+  expected-result: |
+    (text)
