@@ -1,29 +1,25 @@
 ---
 functional:
-  - A guest must be able to play a simple battle without signing up
-  - A user must be able to sign in by filling in the "Email" and "Password" fields
-  - A user must be able to sign in with a Github account
-  - A user must be able to sign in with a Discord account
-  - A user must be able to sign up by filling in the following fields - "Nickname", "Email", "Password" and "Password Confirmation"
-  - A user must be able to sign up with a Github account
-  - A user must be able to sign up with a Discord account
-  - A user must be able to reset the password
-  - A user must be able to sign out
-  - A user must be able to create a game
-  - A user must be able to see his/her and others' statistics, such as rank and amount of games played
-  - A user must be able to change the password
-  - A user must be able to reach support
-  - A user must be able to change the task language in a game
-  - The tasks in games are available in 2 languages - English and Russian
-  - Players must be able to see each other's code editors and test outputs
-  - Users as guests must be able to watch players' games in real time
-  - The player must be able to change a programming language in a game
-  - Users earn points, which are used to create weekly, monthly, and all-time rankings
-  - A user must be able to play with any other user, a bot or a friend
-  - A user must be able to choose a game by difficulty level
-  - A user must be able to choose a specific or random game
-  - Registered users must be able to chat on the website
-  - Completed games are available as replays. The code editor is displayed like a playback interface.
+  - +A user must be able to play a simple battle without signing up
+  - +A user must be able to sign in with email and password
+  - +A user must be able to sign in with a Github account
+  - +A user must be able to sign in with a Discord account
+  - +A user must be able to sign up with nickname, email and password
+  - +A user must be able to sign up with a Github account
+  - +A user must be able to sign up with a Discord account
+  - +A user must be able to change their password
+  - +A user must be able to sign out
+  - ++?A user must be able to play with any other user, a bot or a friend
+  - +A user must be able to choose a game by difficulty level
+  - +A user must be able to choose a specific or random game
+  - +A user must be able to change a programming language in a game
+  - +The tasks in games are available in 2 languages - English and Russian
+  - +Players must be able to see each other's code editors and test outputs
+  - +Users as guests must be able to watch players' games in real time
+  - +Completed games are available as replays. The code editor is displayed like a playback interface.
+  - +Users earn points, which are used to create weekly, monthly, and all-time rankings
+  - +A registered user must be able to chat on the website
+  - +A user must be able to change their username
 non-functional:
   - The website must be designed with usability in mind and optimized for performance
   - The website must be secure and protect user data
@@ -34,5 +30,4 @@ implicit:
   - All interface elements must be rendered correctly
   - All external links must be opened in a new browser tab
   - Since the project is open source, it must have a link to its repository
-  - Full localization of website content based on the selected interface language
   - The website must maintain user sessions when closed and reopened, allowing users to remain logged in without requiring reauthentication.
