@@ -98,7 +98,7 @@
   status: pass
 
 - summary: |
-    Successful login using a registered email and password.
+    Successful login using a registered email and password
   requirement: |
     When a user signs in with a registered email and correct password, the login session starts successfully
   prerequisites: |
@@ -265,7 +265,7 @@
   status: pass
 
 - summary: |
-    Correct functionality of the "CREATE A GAME" button in the lobby page
+    Correct functionality of the "CREATE A GAME" button
   requirement: |
     When a user clicks the "CREATE A GAME" button, a modal window pops up with the parameters of the game to be created
   prerequisites: |
@@ -376,7 +376,7 @@
   status: pass
 
 - summary: |
-    Ability to accept an invitation from a friend
+    Ability to accept an invitation from a friend and join a game
   requirement: |
     When someone invites a user to play a game, the user can see that and accept the invitation
   prerequisites: |
@@ -584,7 +584,7 @@
   status: pass
 
 - summary: |
-    A user sees the opponent's code editor
+    A user sees an opponent's code editor
   requirement: |
     When the user is in a game, they can see their opponent's code editor
   prerequisites: |
@@ -598,7 +598,7 @@
   status: pass
 
 - summary: |
-    Inability to type in the opponent's code editor
+    Inability to type in an opponent's code editor
   requirement: |
     When a user tries to type in their opponent's code editor, nothing is entered
   prerequisites: |
@@ -612,7 +612,7 @@
   status: pass
 
 - summary: |
-    The user sees the output of the opponent's tests
+    The user sees the output of opponent's tests
   requirement: |
     When a user is in a game, they can see the output of the opponent's tests
   prerequisites: |
@@ -690,7 +690,7 @@
     - Check whether your rating has been decreased or not after losing the game to the bot;
   expected-result: |
     The rating remains the same
-  status:
+  status: pass
 
 - summary: |
     Rating increases after winning against a human opponent
@@ -828,14 +828,90 @@
   status: pass
 
 - summary: |
-    (text)
+    All external links open successfully in a new browser tab
   requirement: |
-    (text)
+    When a user clicks on an external link, it opens in a new browser tab
   prerequisites: |
-    (text)
+    The website is open;
+    The user should have an account;
   test-data: |
-    (text or n/a)
+    N/A
   steps:
-    - (text)
+    - Check all external links on the unauthenticated home page including the webpage footer - https://codebattle.hexlet.io/
+    - Sign in
+    - Check all external links in the footer again
+    - Open menu by clicking on your profile picture
+    - Check all external links in the menu
+    - Find a user whose codebattle account is linked to their Github account and open it
+    - Check the user's external Github link that leads to their Github account
   expected-result: |
-    (text)
+    All external links open in a new browser tab
+  status: fail
+
+- summary: |
+    The Codebattle website has a link to its repository
+  requirement: |
+    When a user visits Hexlet's Codebattle website, they can find a link to a project's repository
+  prerequisites: |
+    The website is open - https://codebattle.hexlet.io/
+  test-data: |
+    N/A
+  steps:
+    - Find the link that leads to the project's repository (e.g. Github or Gitlab repository)
+  expected-result: |
+    The link is available
+  status: pass
+
+- summary: |
+    The Codebattle website preserves login sessions
+  requirement: |
+    When a user closes the website and reopens it again, they remain logged in without having to re-authenticate
+  prerequisites: |
+    The website is open;
+    The user is signed in;
+  test-data: |
+    N/A
+  steps:
+    - Close the website
+    - Reopen the website - https://codebattle.hexlet.io/
+  expected-result: |
+    The user remains logged in
+  status: pass
+
+- summary: |
+    The Codebattle website is responsive
+  requirement: |
+    The website interface should display correctly on different screen resolutions. Elements should not move off the screen.
+  prerequisites: |
+    The website is open
+  test-data: |
+    Parameters for iPhone 11 Pro = width - 375, height - 812, DPR - 3
+    Parameters for iPad Mini = width - 768, height - 1024, DPR - 2
+    Parameters for Galaxy S20 = width - 360, height - 800, DPR - 4
+    Parameters for Galaxy A51/71 = width - 412, height - 914, DPR - 4
+  steps:
+    - Switch to Responsive Design Mode in DevTools
+    - Enter screen resolution settings for iPhone 11 Pro
+    - Check website adaptability on all pages
+    - Repeat the same steps for iPad Mini, Galaxy S20 and Galaxy A51
+  expected-result: |
+    All interface elements are correctly displayed on the website and do not go beyond the screen boundaries at different resolutions
+  status: fail
+
+- summary: |
+    The Codebattle website is cross-browser compatible
+  requirement: |
+    The website interface should display correctly in different browsers, and all functionality should work without errors
+  prerequisites: |
+    The website is open
+    The latest versions of Google Chrome, Firefox and Safari are installed
+  test-data: |
+    Google Chrome browser - Version 129.0.6668.101 (Official Build) (arm64)
+    Firefox browser - 131.0.3 (aarch64)
+    Safari browser - Version 18.0.1 (19619.1.26.111.11, 19619)
+  steps:
+    - Check cross-browser compatibility in Google Chrome on all pages
+    - Repeat the same in Firefox and Safari
+  expected-result: |
+    All interface elements are correctly displayed on the site in each browser and do not go beyond the screen boundaries. All functionality works correctly.
+  status: fail
