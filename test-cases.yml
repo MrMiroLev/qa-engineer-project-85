@@ -12,7 +12,6 @@
     - Click the "TRY SIMPLE BATTLE" button
   expected-result: |
     The game page opens, where the user competes against a bot by completing a task first
-  status: pass
 
 - summary: |
     Correct functionality of the "Sign up" button
@@ -27,7 +26,6 @@
     - Click the "Sign up" button
   expected-result: |
     The user has been redirected to the page containing the registration form - https://codebattle.hexlet.io/users/new
-  status: pass
 
 - summary: |
     Successful registration using email and password
@@ -46,7 +44,6 @@
   expected-result: |
     The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user can see their username and profile picture in the webpage header;
-  status: pass
 
 - summary: |
     Successful registration using a Github account
@@ -63,7 +60,6 @@
   expected-result: |
     The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user can see their username and profile picture in the webpage header;
-  status: pass
 
 - summary: |
     Successful registration using a Discord account
@@ -80,7 +76,6 @@
   expected-result: |
     The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user can see their username and profile picture in the webpage header;
-  status: fail
 
 - summary: |
     Correct functionality of the "Sign in" button
@@ -95,7 +90,6 @@
     - Click the "Sign in" button
   expected-result: |
     The user has been redirected to the page containing the login form - https://codebattle.hexlet.io/session/new
-  status: pass
 
 - summary: |
     Successful login using a registered email and password
@@ -113,7 +107,6 @@
   expected-result: |
     The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user can see their username and profile picture in the webpage header;
-  status: pass
 
 - summary: |
     Unsuccessful login with an unregistered email
@@ -132,7 +125,6 @@
     The user does not see their username and profile picture in the webpage header;
     The user has not been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user gets the error message, "EMAIL_NOT_FOUND";
-  status: pass
 
 - summary: |
     Unsuccessful login with a wrong password
@@ -150,7 +142,6 @@
     The user does not see their username and profile picture in the webpage header;
     The user has not been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user gets the error message, "INVALID_PASSWORD";
-  status: pass
 
 - summary: |
     Successful login using a Github account
@@ -167,7 +158,6 @@
   expected-result: |
     The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user can see their username and profile picture in the webpage header;
-  status: pass
 
 - summary: |
     Successful login using a Discord account
@@ -184,7 +174,6 @@
   expected-result: |
     The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
     The user can see their username and profile picture in the webpage header;
-  status: fail
 
 - summary: |
     Correct functionality of the "Forgot your password?" text link
@@ -198,7 +187,6 @@
     - Click the "Forgot your password?" text link
   expected-result: |
     The user has been redirected to the page where they enter their email address to reset the password - https://codebattle.hexlet.io/remind_password
-  status: pass
 
 - summary: |
     Successful receipt of the password reset instruction by email
@@ -215,7 +203,6 @@
   expected-result: |
     The user has been informed about the email being sent which has the instruction on how to reset their password;
     The user gets an email with the instruction;
-  status: pass
 
 - summary: |
     Correct functionality of the password reset link
@@ -230,7 +217,6 @@
     - Click the link in the email
   expected-result: |
     The user has been redirected to the page where they enter a new password
-  status: pass
 
 - summary: |
     Successful password reset
@@ -247,7 +233,6 @@
   expected-result: |
     The message appears stating that the user can now sign in with their new password;
     The user is able to sign in with the new password;
-  status: pass
 
 - summary: |
     Successful logout from account
@@ -262,7 +247,6 @@
     - Click the "Sign Out" button
   expected-result: |
     The user has been redirected to the home page - https://codebattle.hexlet.io/
-  status: pass
 
 - summary: |
     Correct functionality of the "CREATE A GAME" button
@@ -277,7 +261,6 @@
     - Click the "CREATE A GAME" button
   expected-result: |
     The modal window pops up with the game parameters that the user needs to set
-  status: pass
 
 - summary: |
     Ability to play with a bot
@@ -295,7 +278,6 @@
   expected-result: |
     The game with a bot has been started;
     The opponent has the robot icon next to its name;
-  status: pass
 
 - summary: |
     Ability to play with other user
@@ -313,7 +295,6 @@
     - Wait until someone joins the game
   expected-result: |
     The game with other user has been started
-  status: pass
 
 - summary: |
     Ability to invite a friend to play a game
@@ -334,7 +315,6 @@
     The counter increases by 1 in the corner of the crossing swords icon button;
     The invitation with the opponent's name in it can be seen after the user clicks the crossing swords icon button;
     The user receives the notification in the chat that they have invited their opponent;
-  status: pass
 
 - summary: |
     Inability to invite a friend to play a game if an invitation already exists in their name
@@ -354,7 +334,6 @@
   expected-result: |
     The counter does not increase in the corner of the crossing swords icon button;
     There is still only one invitation for the opponent to whom the user tried to send another one;
-  status: pass
 
 - summary: |
     Ability to cancel an invitation for a friend
@@ -373,7 +352,6 @@
   expected-result: |
     The counter decreases by 1 in the corner of the crossing swords icon button;
     The cancelled invitation disappears from the list;
-  status: pass
 
 - summary: |
     Ability to accept an invitation from a friend and join a game
@@ -390,7 +368,6 @@
     - Click the "Accept" button
   expected-result: |
     The user has been redirected to the game
-  status: fail
 
 - summary: |
     Successfully joining a game created by another user or a bot
@@ -405,7 +382,6 @@
     - Click the "Fight" button
   expected-result: |
     The user has been redirected to the game
-  status: pass
 
 - summary: |
     Ability to switch between light and dark theme in the code editor
@@ -420,7 +396,6 @@
     - Click the icon button again to reverse the previous theme
   expected-result: |
     The theme switches from dark to light and vice versa
-  status: pass
 
 - summary: |
     Notification of winning a game
@@ -436,7 +411,6 @@
   expected-result: |
     The user gets the notification about winning the game;;
     The message appears in the output tab telling the user that the all tests have been passed;
-  status: pass
 
 - summary: |
     Notification of failing tests in a game
@@ -452,7 +426,6 @@
   expected-result: |
     The message appears in the output tab telling the user that the tests have been failed;
     The user does not win the game;
-  status: pass
 
 - summary: |
     Notification of losing a game
@@ -468,7 +441,6 @@
   expected-result: |
     The user gets the notification about losing the game;
     The message appears in the opponent's output tab stating that all tests have been passed;
-  status: pass
 
 - summary: |
     Notification of a draw in a game
@@ -483,7 +455,6 @@
     - Wait until the time is up
   expected-result: |
     The user gets the notification about the draw in the game
-  status: pass
 
 - summary: |
     Ability to give up in a game
@@ -499,7 +470,6 @@
     - Click the "Give up" button in the confirmation window again
   expected-result: |
     The user gets the notification about losing the game
-  status: pass
 
 - summary: |
     Ability to choose the difficulty level of a game
@@ -516,7 +486,6 @@
     - Click the button to create a game
   expected-result: |
     The game starts and the level matches the one selected by the user
-  status: pass
 
 - summary: |
     Ability to choose a random game
@@ -534,7 +503,6 @@
     - Make sure the game is different every time you create it
   expected-result: |
     The games that were created are different
-  status: pass
 
 - summary: |
     Ability to choose a specific game
@@ -551,7 +519,6 @@
     - Click the button to create a game
   expected-result: |
     The game that was created matches the one selected by the user
-  status: pass
 
 - summary: |
     Successful change of a programming language in a game
@@ -565,7 +532,6 @@
     - Select any other language listed in the drop-down
   expected-result: |
     The syntax of the code in the editor has been changed according to the selected programming language
-  status: pass
 
 - summary: |
     Tasks are availbale in both English and Russian
@@ -581,7 +547,6 @@
     - Select "EN" to see the task in English
   expected-result: |
     The task is written in both English and Russian
-  status: pass
 
 - summary: |
     A user sees an opponent's code editor
@@ -595,7 +560,6 @@
     - Check if opponent's code editor is viewable
   expected-result: |
     The opponent's code editor is viewable
-  status: pass
 
 - summary: |
     Inability to type in an opponent's code editor
@@ -609,7 +573,6 @@
     - Try to type any characters into the opponent's code editor
   expected-result: |
     Nothing happens
-  status: pass
 
 - summary: |
     The user sees the output of opponent's tests
@@ -623,7 +586,6 @@
     - Check if the opponent has the tab with tests' output
   expected-result: |
     The opponent's tests' output is viewable
-  status: pass
 
 - summary: |
     Ability to watch others' battles (games)
@@ -639,7 +601,6 @@
     - Click the "Show" button to see the ongoing battle between other players
   expected-result: |
     The user sees the code editors and the outputs of players
-  status: pass
 
 - summary: |
     Ability to view the history of a completed game as a replay
@@ -655,7 +616,6 @@
     - Click the "Show" button
   expected-result: |
     The user has been redirected to the playback interface of the completed game
-  status: fail
 
 - summary: |
     Winning against a bot does not affect rating
@@ -673,7 +633,6 @@
     - Check whether your rating has been increased or not after winning the game against the bot;
   expected-result: |
     The rating remains the same
-  status: pass
 
 - summary: |
     Losing against a bot does not affect rating
@@ -690,7 +649,6 @@
     - Check whether your rating has been decreased or not after losing the game to the bot;
   expected-result: |
     The rating remains the same
-  status: pass
 
 - summary: |
     Rating increases after winning against a human opponent
@@ -708,7 +666,6 @@
     - Check if your rating has been increased after winning against the human opponent;
   expected-result: |
     The rating has been increased
-  status: pass
 
 - summary: |
     Rating decreases after losing to a human opponent
@@ -725,7 +682,6 @@
     - Check if your rating has been decreased after losing a game to the human opponent
   expected-result: |
     The rating has been decreased
-  status: pass
 
 - summary: |
     Ability to send a message in general chat in the "LOBBY" tab
@@ -742,7 +698,6 @@
     - Click the "Send" button
   expected-result: |
     The text appears in the general chat
-  status: pass
 
 - summary: |
     Ability to select an online player to send a direct message
@@ -759,7 +714,6 @@
     - Click the "Direct message" option
   expected-result: |
     The chat with the selected player has been opened
-  status: pass
 
 - summary: |
     Ability to send a direct message to another player in lobby
@@ -776,7 +730,6 @@
     - Click the "Send" button
   expected-result: |
     The text appears in the private chat
-  status: pass
 
 - summary: |
     Ability to send a message to an opponent in a game
@@ -791,7 +744,6 @@
     - Click the "Send" button
   expected-result: |
     The text appears in the chat
-  status: pass
 
 - summary: |
     Successful change of username
@@ -809,7 +761,6 @@
     - Reload the page
   expected-result: |
     The user sees their new username in the webpage header
-  status: pass
 
 - summary: |
     Unsuccessful change of username
@@ -825,7 +776,6 @@
     - Click the "Save" button
   expected-result: |
     The user sees the error message stating that the username has already been taken
-  status: pass
 
 - summary: |
     All external links open successfully in a new browser tab
@@ -846,7 +796,6 @@
     - Check the user's external Github link that leads to their Github account
   expected-result: |
     All external links open in a new browser tab
-  status: fail
 
 - summary: |
     The Codebattle website has a link to its repository
@@ -860,7 +809,6 @@
     - Find the link that leads to the project's repository (e.g. Github or Gitlab repository)
   expected-result: |
     The link is available
-  status: pass
 
 - summary: |
     The Codebattle website preserves login sessions
@@ -876,7 +824,6 @@
     - Reopen the website - https://codebattle.hexlet.io/
   expected-result: |
     The user remains logged in
-  status: pass
 
 - summary: |
     The Codebattle website is responsive
@@ -896,7 +843,6 @@
     - Repeat the same steps for iPad Mini, Galaxy S20 and Galaxy A51
   expected-result: |
     All interface elements are correctly displayed on the website and do not go beyond the screen boundaries at different resolutions
-  status: fail
 
 - summary: |
     The Codebattle website is cross-browser compatible
@@ -914,4 +860,3 @@
     - Repeat the same in Firefox and Safari
   expected-result: |
     All interface elements are correctly displayed on the site in each browser and do not go beyond the screen boundaries. All functionality works correctly.
-  status: fail
