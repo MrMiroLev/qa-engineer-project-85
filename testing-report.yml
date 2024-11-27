@@ -1,0 +1,220 @@
+---
+- summary: |
+    Ability for a user to play a simple battle without signing up
+  status: pass
+
+- summary: |
+    Correct functionality of the "Sign up" button
+  status: pass
+
+- summary: |
+    Successful registration using email and password
+  status: pass
+
+- summary: |
+    Successful registration using a Github account
+  status: pass
+
+- summary: |
+    Successful registration using a Discord account
+  status: fail
+
+- summary: |
+    Correct functionality of the "Sign in" button
+  status: pass
+
+- summary: |
+    Successful login using a registered email and password
+  status: pass
+
+- summary: |
+    Unsuccessful login with an unregistered email
+  status: pass
+
+- summary: |
+    Unsuccessful login with a wrong password
+  status: pass
+
+- summary: |
+    Successful login using a Github account
+  status: pass
+
+- summary: |
+    Successful login using a Discord account
+  status: fail
+
+- summary: |
+    Correct functionality of the "Forgot your password?" text link
+  status: pass
+
+- summary: |
+    Successful receipt of the password reset instruction by email
+  status: pass
+
+- summary: |
+    Correct functionality of the password reset link
+  status: pass
+
+- summary: |
+    Successful password reset
+  status: pass
+
+- summary: |
+    Successful logout from account
+  status: pass
+
+- summary: |
+    Correct functionality of the "CREATE A GAME" button
+  status: pass
+
+- summary: |
+    Ability to play with a bot
+  status: pass
+
+- summary: |
+    Ability to play with other user
+  status: pass
+
+- summary: |
+    Ability to invite a friend to play a game
+  status: pass
+
+- summary: |
+    Inability to invite a friend to play a game if an invitation already exists in their name
+  status: pass
+
+- summary: |
+    Ability to cancel an invitation for a friend
+  status: pass
+
+- summary: |
+    Ability to accept an invitation from a friend and join a game
+  status: fail
+
+- summary: |
+    Successfully joining a game created by another user or a bot
+  status: pass
+
+- summary: |
+    Ability to switch between light and dark theme in the code editor
+  status: pass
+
+- summary: |
+    Notification of winning a game
+  status: pass
+
+- summary: |
+    Notification of failing tests in a game
+  status: pass
+
+- summary: |
+    Notification of losing a game
+  status: pass
+
+- summary: |
+    Notification of a draw in a game
+  status: pass
+
+- summary: |
+    Ability to give up in a game
+  status: pass
+
+- summary: |
+    Ability to choose the difficulty level of a game
+  status: pass
+
+- summary: |
+    Ability to choose a random game
+  status: pass
+
+- summary: |
+    Ability to choose a specific game
+  status: pass
+
+- summary: |
+    Successful change of a programming language in a game
+  status: pass
+
+- summary: |
+    Tasks are availbale in both English and Russian
+  status: pass
+
+- summary: |
+    A user sees an opponent's code editor
+  status: pass
+
+- summary: |
+    Inability to type in an opponent's code editor
+  status: pass
+
+- summary: |
+    The user sees the output of opponent's tests
+  status: pass
+
+- summary: |
+    Ability to watch others' battles (games)
+  status: pass
+
+- summary: |
+    Ability to view the history of a completed game as a replay
+  status: fail
+
+- summary: |
+    Winning against a bot does not affect rating
+  status: pass
+
+- summary: |
+    Losing against a bot does not affect rating
+  status: pass
+
+- summary: |
+    Rating increases after winning against a human opponent
+  status: pass
+
+- summary: |
+    Rating decreases after losing to a human opponent
+  status: pass
+
+- summary: |
+    Ability to send a message in general chat in the "LOBBY" tab
+  status: pass
+
+- summary: |
+    Ability to select an online player to send a direct message
+  status: pass
+
+- summary: |
+    Ability to send a direct message to another player in lobby
+  status: pass
+
+- summary: |
+    Ability to send a message to an opponent in a game
+  status: pass
+
+- summary: |
+    Successful change of username
+  status: pass
+
+- summary: |
+    Unsuccessful change of username
+  status: pass
+
+- summary: |
+    All external links open successfully in a new browser tab
+  status: fail
+
+- summary: |
+    The Codebattle website has a link to its repository
+  status: pass
+
+- summary: |
+    The Codebattle website preserves login sessions
+  status: pass
+
+- summary: |
+    The Codebattle website is responsive
+  status: fail
+
+- summary: |
+    The Codebattle website is cross-browser compatible
+  status: fail
