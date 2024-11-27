@@ -5,11 +5,10 @@
 
 This game challenges two programmers to solve the same task simultaneously using different programming languages. The player who completes the task first wins the match.
 
-> [!NOTE]
-> The project has undergone manual testing and includes the following files for reference:
->
-> - **requirements.yml**: Defines the requirements that the project/software must fulfill.
-> - **test-cases.yml**: Lists the test cases designed for the project.
-> - **testing-report.yml**: Documents the results of the tests performed based on the test cases.
-> - **issues.yml**: Provides links to reported bugs.
-> - **reopened_issues.yml**: Contains links to issues with unresolved bugs.
+The project has undergone manual testing and includes the following files for reference:
+
+- **requirements.yml**: Defines the requirements that must be fulfilled.
+- **test-cases.yml**: Lists the test cases designed for the project.
+- **testing-report.yml**: Lists the results of the tests performed based on the test cases.
+- **issues.yml**: Provides links to reported bugs.
+- **reopened_issues.yml**: Contains links to issues with unresolved bugs.
