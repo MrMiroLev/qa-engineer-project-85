@@ -1,10 +1,10 @@
 ---
 functional:
   - A user must be able to play a simple battle without signing up
-  - A user must be able to sign in with email and password
+  - A user must be able to sign in with an email and password
   - A user must be able to sign in with a Github account
   - A user must be able to sign in with a Discord account
-  - A user must be able to sign up with nickname, email and password
+  - A user must be able to sign up with a nickname, email and password
   - A user must be able to sign up with a Github account
   - A user must be able to sign up with a Discord account
   - A user must be able to change their password
