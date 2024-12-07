@@ -281,22 +281,22 @@
     The opponent has the robot icon next to its name;
 
 - summary: |
-    Ability to play with other user
+    Avility to create a game that other user can join
   requirement: |
-    When a user creates a game where game type is set to "With other user", they play with the correspondiong opponent
+    When a user creates a game where game type is set to "With other user", other users can see it in the lobby tab
   prerequisites: |
-    The user is signed in;
-    The authenticated home page is open - https://codebattle.hexlet.io/;
-    The "Create a game" modal window is open;
+    The user that will create the game is signed in;
+    The user that will see the created game is signed in (use a different browser);
+    The authenticated home page is open - https://codebattle.hexlet.io/ for both users;
+    The "Create a game" modal window is open for the first user;
   test-data: |
     N/A
   steps:
     - Set game type to "With other user"
     - Leave other parameters as default
     - Click the "Create battle" button
-    - Wait until someone joins the game
   expected-result: |
-    The game with other user has been started
+    The game has successfully been created and it is visible in the lobby tab on another account
 
 - summary: |
     Ability to invite a friend to play a game
