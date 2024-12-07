@@ -274,6 +274,7 @@
     N/A
   steps:
     - Set game type to "With a bot"
+    - Leave other parameters as default
     - Click the "Create battle" button
   expected-result: |
     The game with a bot has been started;
@@ -291,6 +292,7 @@
     N/A
   steps:
     - Set game type to "With other user"
+    - Leave other parameters as default
     - Click the "Create battle" button
     - Wait until someone joins the game
   expected-result: |
@@ -309,6 +311,7 @@
   steps:
     - Set game type to "With a friend"
     - Choose an opponent from the drop-down list
+    - Leave other parameters as default
     - Click the "Create invite" button
     - Click the crossing swords icon button in the webpage header
   expected-result: |
@@ -329,6 +332,7 @@
   steps:
     - Set game type to "With a friend"
     - Select an opponent from the drop-down list to whom an invitation has already been sent
+    - Leave other parameters as default
     - Click the "Create invite" button
     - Click the crossing swords icon button in the webpage header
   expected-result: |
@@ -498,6 +502,7 @@
   test-data: |
     N/A
   steps:
+    - Leave parameters as default or modify them
     - Click the button to create a game
     - Create a few more games
     - Make sure the game is different every time you create it
@@ -516,6 +521,7 @@
     N/A
   steps:
     - Select the game from the drop-down list
+    - Leave other parameters as default or modify them
     - Click the button to create a game
   expected-result: |
     The game that was created matches the one selected by the user
