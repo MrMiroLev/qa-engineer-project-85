@@ -452,8 +452,8 @@
   requirement: |
     When a user loses the game, they are notified about that
   prerequisites: |
-    The user is in the game (first account);
-    The opponent is in the game (second account);
+    The user (first account) is in the game;
+    The opponent (second account) is in the game;
   test-data: |
     Task name = rect_area
     Programming language = Node.js 20.11.1
@@ -475,8 +475,8 @@
   requirement: |
     When no one wins a game and time is up, the players are notified about the draw
   prerequisites: |
-    The user is in the game (first account);
-    The opponent is in the game (second account);
+    The user (first account) is in the game;
+    The opponent (second account) is in the game;
   test-data: |
     Time = 3 min
   steps:
@@ -610,8 +610,8 @@
   requirement: |
     When a user is in a game, they can see the output of the opponent's tests
   prerequisites: |
-    The user is in the game (first account);
-    The opponent is in the game (second account);
+    The user (first account) is in the game;
+    The opponent (second account) is in the game;
   test-data: |
     N/A
   steps:
