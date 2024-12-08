@@ -409,11 +409,19 @@
     The user is in the game;
     The user has written code that should pass all tests;
   test-data: |
-    N/A
+    Task name = rect_area
+    Programming language = Node.js 20.11.1
+    Solution =
+    ```
+    const _ = require("lodash");
+    const R = require("rambda");
+    const solution = (width, length) => width * length;
+    module.exports = solution;
+    ```
   steps:
     - Click the "Run" button
   expected-result: |
-    The user gets the notification about winning the game;;
+    The user gets the notification about winning the game;
     The message appears in the output tab telling the user that the all tests have been passed;
 
 - summary: |
@@ -424,7 +432,15 @@
     The user is in the game;
     The user has written code that should not pass all tests;
   test-data: |
-    N/A
+    Task name = rect_area
+    Programming language = Node.js 20.11.1
+    Solution =
+    ```
+    const _ = require("lodash");
+    const R = require("rambda");
+    const solution = (width, length) => (width + length) * 2;
+    module.exports = solution;
+    ```
   steps:
     - Click the "Run" button
   expected-result: |
@@ -436,12 +452,20 @@
   requirement: |
     When a user loses the game, they are notified about that
   prerequisites: |
-    The user is in the game;
-    The opponent can win the game;
+    The user is in the game (first account);
+    The opponent is in the game (second account);
   test-data: |
-    N/A
+    Task name = rect_area
+    Programming language = Node.js 20.11.1
+    Solution =
+    ```
+    const _ = require("lodash");
+    const R = require("rambda");
+    const solution = (width, length) => width * length;
+    module.exports = solution;
+    ```
   steps:
-    - Let the opponent win the game
+    - Click the "Run" button from the second account (opponent)
   expected-result: |
     The user gets the notification about losing the game;
     The message appears in the opponent's output tab stating that all tests have been passed;
@@ -451,14 +475,15 @@
   requirement: |
     When no one wins a game and time is up, the players are notified about the draw
   prerequisites: |
-    The user is in the game;
-    The user and opponent wait for time to pass in the game;
+    The user is in the game (first account);
+    The opponent is in the game (second account);
   test-data: |
-    N/A
+    Time = 3 min
   steps:
     - Wait until the time is up
   expected-result: |
-    The user gets the notification about the draw in the game
+    The user (first account) gets the notification about the draw in the game
+    The opponent (second account) gets the notification about the draw in the game
 
 - summary: |
     Ability to give up in a game
