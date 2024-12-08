@@ -610,13 +610,15 @@
   requirement: |
     When a user is in a game, they can see the output of the opponent's tests
   prerequisites: |
-    The user is in the game
+    The user is in the game (first account);
+    The opponent is in the game (second account);
   test-data: |
     N/A
   steps:
-    - Check if the opponent has the tab with tests' output
+    - Click the "Run" button from the second account (opponent)
+    - Click on the opponent's tests' output tab from the first account (user)
   expected-result: |
-    The opponent's tests' output is viewable
+    The opponent's tests' output is viewable by the user (first account)
 
 - summary: |
     Ability to watch others' battles (games)
