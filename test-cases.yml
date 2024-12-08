@@ -573,7 +573,7 @@
   test-data: |
     N/A
   steps:
-    - Click the drop-down list as shown in screenshot056.png
+    - Click on the drop-down list of languages
     - Select "RU" to see the task in Russian
     - Select "EN" to see the task in English
   expected-result: |
