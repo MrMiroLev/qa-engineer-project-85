@@ -39,7 +39,7 @@
     Email = correct_email@mail.com
     Password (and Password Confirmation) = aBce248+
   steps:
-    - Enter the nickname, email, password, and password provided
+    - Enter the nickname, email, and password provided
     - Click the "Submit" button
   expected-result: |
     The user has been redirected to the authenticated home page with the lobby tab open - https://codebattle.hexlet.io/#lobby;
